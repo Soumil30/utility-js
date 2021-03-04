@@ -13,4 +13,8 @@ describe('Reduce', () => {
     it("reduce(['a','b','c'],(x,y)=>x+y) should be `abc`", () => {
         expect(reduce(['a','b','c'], (x,y) => x + y)).toEqual('abc');
     });
+
+    it("reduce(['a','b','c'],(x,y)=>x+y,'z') should be `zabc`", () => {
+        expect(reduce(['a','b','c'], (x,y) => x + y, 'z')).toEqual('zabc');
+    });
 })
