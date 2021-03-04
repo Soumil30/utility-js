@@ -13,4 +13,8 @@ describe('Filter', () => {
     it('filter([1,2,3], x => false) should give "[]"', () => {
         expect(filter([1,2,3], x => false)).toEqual([]);
     });
+
+    it('filter([1,2,3], x => x > 1) should give "[2,3]"', () => {
+        expect(filter([1,2,3], x => x > 1)).toEqual([2,3]);
+    });
 })
