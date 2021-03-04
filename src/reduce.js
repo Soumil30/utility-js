@@ -1,6 +1,6 @@
-const reduce = (collection, func) => {
+const reduce = (collection, func, currentValue) => {
     if (collection.length == 0) {
-        return undefined;
+        return currentValue;
     }
 
     return null;
