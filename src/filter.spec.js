@@ -1,4 +1,5 @@
 const filter = require('./filter');
+const filterUpperCase = require('./filterUpperCase');
 
 describe('Filter', () => {
 
@@ -16,5 +17,9 @@ describe('Filter', () => {
 
     it('filter([1,2,3], x => x > 1) should give "[2,3]"', () => {
         expect(filter([1,2,3], x => x > 1)).toEqual([2,3]);
+    });
+
+    it("filter(['a','B','c','D'], filterUpperCase) should be '['B','D']'", () => {
+        expect(filter(['a','B','c','D'], filterUpperCase)).toEqual(['B','D']);
     });
 })
